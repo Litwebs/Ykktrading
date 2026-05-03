@@ -60,13 +60,13 @@ const Index = () => {
               key={p.name}
               className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card"
             >
-              <div className="relative flex aspect-square items-center justify-center bg-gradient-hero">
+              <div className="relative aspect-square overflow-hidden bg-gradient-hero">
                 {p.tag && (
-                  <span className="absolute left-3 top-3 rounded-full bg-primary px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-primary-foreground">
+                  <span className="absolute left-3 top-3 z-10 rounded-full bg-primary px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-primary-foreground">
                     {p.tag}
                   </span>
                 )}
-                <span className="text-7xl transition-transform duration-300 group-hover:scale-110" aria-hidden>{p.emoji}</span>
+                <img src={p.image} alt={p.name} loading="lazy" width={512} height={512} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
               </div>
               <div className="flex flex-1 flex-col gap-3 p-5">
                 <div>
