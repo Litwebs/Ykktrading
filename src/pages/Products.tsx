@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, ShieldCheck } from "lucide-react";
-import { enquireLink, products, EMAIL } from "@/lib/site";
+import { enquireLink, products } from "@/lib/site";
 
 const Products = () => {
   return (
@@ -66,58 +67,18 @@ const Products = () => {
         ))}
       </div>
 
-      {/* Refund & Exchange Policy */}
-      <div className="mx-auto mt-16 max-w-2xl">
-        <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
-          <h2 className="font-display text-lg font-semibold mb-4 flex items-center gap-2">
-            <ShieldCheck className="h-5 w-5 text-primary" />
-            Refund &amp; Exchange Policy
-          </h2>
-          <ul className="space-y-3 text-sm text-muted-foreground">
-            <li className="flex gap-2.5">
-              <span className="mt-0.5 text-primary font-bold shrink-0">•</span>
-              <span>
-                <strong className="text-foreground">Unopened items:</strong>{" "}
-                Returns accepted within 14 days of delivery. Items must be in
-                their original, sealed packaging.
-              </span>
-            </li>
-            <li className="flex gap-2.5">
-              <span className="mt-0.5 text-primary font-bold shrink-0">•</span>
-              <span>
-                <strong className="text-foreground">Exchanges:</strong> We're
-                happy to exchange any item for a product of equal or greater
-                value. Contact us via WhatsApp to arrange.
-              </span>
-            </li>
-            <li className="flex gap-2.5">
-              <span className="mt-0.5 text-primary font-bold shrink-0">•</span>
-              <span>
-                <strong className="text-foreground">
-                  Damaged or incorrect items:
-                </strong>{" "}
-                If you receive a damaged or wrong item, please get in touch
-                within 48 hours and we'll make it right promptly.
-              </span>
-            </li>
-            <li className="flex gap-2.5">
-              <span className="mt-0.5 text-primary font-bold shrink-0">•</span>
-              <span>
-                <strong className="text-foreground">Opened products:</strong>{" "}
-                For hygiene and safety reasons, opened supplements cannot be
-                returned unless the product is faulty.
-              </span>
-            </li>
-          </ul>
-          <p className="mt-4 text-xs text-muted-foreground border-t border-border pt-4">
-            To initiate a return or exchange, please contact us on WhatsApp or
-            email{" "}
-            <a
-              href={`mailto:${EMAIL}`}
-              className="underline underline-offset-2 hover:text-foreground transition-colors"
+      {/* Returns policy link */}
+      <div className="mx-auto mt-16 max-w-2xl text-center">
+        <div className="inline-flex items-center gap-2 rounded-2xl border border-border/60 bg-card px-6 py-4 shadow-soft">
+          <ShieldCheck className="h-5 w-5 text-primary shrink-0" />
+          <p className="text-sm text-muted-foreground">
+            Not satisfied? Read our full{" "}
+            <Link
+              to="/refund-exchange"
+              className="font-semibold text-foreground underline underline-offset-2 hover:text-primary transition-colors"
             >
-              {EMAIL}
-            </a>
+              Refund &amp; Exchange Policy
+            </Link>
             .
           </p>
         </div>

@@ -9,6 +9,7 @@ const navItems = [
   { to: "/products", label: "Products" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
+  { to: "/refund-exchange", label: "Returns" },
 ];
 
 const Layout = () => {
@@ -20,7 +21,9 @@ const Layout = () => {
             <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground shadow-soft">
               <Leaf className="h-5 w-5" />
             </div>
-            <span className="font-display text-lg font-bold tracking-tight">Ykk Trading</span>
+            <span className="font-display text-lg font-bold tracking-tight">
+              Ykk Trading
+            </span>
           </Link>
           <nav className="hidden items-center gap-8 md:flex">
             {navItems.map((item) => (

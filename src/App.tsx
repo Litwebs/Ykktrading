@@ -11,6 +11,7 @@ import About from "./pages/About.tsx";
 import Contact from "./pages/Contact.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import NoService from "./pages/NoService.tsx";
+import RefundExchange from "./pages/RefundExchange.tsx";
 
 const queryClient = new QueryClient();
 
@@ -86,6 +87,7 @@ const App = () => {
               <Route path="/products" element={<Products />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/refund-exchange" element={<RefundExchange />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
